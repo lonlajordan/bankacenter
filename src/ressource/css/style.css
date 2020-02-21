@@ -1,0 +1,459 @@
+/*
+    Created on : 1 mars 2019, 12:33:09
+    Author     : LONLA GATIEN JORDAN
+*/
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+    -fx-text-align: center;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+    -fx-text-align: center;
+}
+
+.tab{
+    -fx-background-image: url('../img/CoarseGrid.png');
+    -fx-background-repeat: repeat;
+    -fx-background-color:
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-pref-width: 200;
+    -fx-pref-height: 50;
+    -fx-text-align: center;
+}
+.tab-pane .tab
+{
+    -fx-text-align: center;
+}
+
+.tab-pane .tab:selected{
+    -fx-background-color: #3c3c3c;
+    -fx-text-align: center;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 18px;
+    -fx-text-font-family : "Arial" ;
+    /*-fx-font-weight: bold;*/
+}
+
+.tab:selected .tab-label {
+    -fx-text-align: center;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #96b946;
+}
+
+.tab-pane:top *.tab-header-area {
+    -fx-text-align: center;
+    -fx-background-image: url('../img/CoarseGrid.png');
+    -fx-background-repeat: repeat;
+    -fx-background-color:
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+            linear-gradient(#20262b, #191d22),
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em; /* overridden as 5 2 0 0 */
+}
+
+
+.background {
+    -fx-background-image: url('../img/CoarseGrid.png');
+    -fx-background-repeat: repeat;
+    -fx-background-color:
+            linear-gradient(#38424b 0%, #1f2429 20%, #191d22 20%),
+            linear-gradient(#20262b, #20262b),/*191d21*/
+            radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,1), rgba(114,131,148,0.1));/*rgba(255,255,255,0)*/
+}
+
+.top-segment {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color:
+            transparent transparent rgba(255, 255, 255, 0.08) transparent,
+            transparent transparent rgba(0, 0, 0, 0.5) transparent;
+    -fx-border-width: 1, 1.5;
+    -fx-border-insets: -1, 0;
+}
+
+.label {
+    -fx-font-family: "Arial";
+    -fx-font-size: 10;
+    -fx-text-fill: rgba(255, 255, 255, 0.4);
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+}
+
+.button-title {
+    -fx-font-family: "Arial";
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+}
+
+.label-progress {
+    -fx-font-family: "Arial";
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+}
+
+.label-field {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14;
+    -fx-text-fill: rgba(255, 255, 255, 0.4);
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+    -fx-text-fill: rgba(255, 255, 255, 0.4);
+}
+
+
+.button-label {
+    -fx-font-family: "Arial";
+    -fx-font-size: 12;
+    -fx-text-fill: white;
+}
+
+.check-box .box {
+    -fx-background-color:
+            rgba(255, 255, 255, 0.1),
+            rgba(0, 0, 0, 1),
+            -fx-outer-border,
+            -fx-inner-border,
+            -fx-body-color;
+    -fx-background-insets: 0 -1.6 -2 -1.6, -1.4, 0, 1, 2;
+}
+
+.check-box:focused .box {
+    -fx-background-color:
+            rgba(255, 255, 255, 0.15),
+            rgba(0, 0, 0, 0.8),
+            -fx-outer-border,
+            -fx-inner-border,
+            white;
+}
+
+.button .text {
+    /*-fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.8), 0, 0.0 , 0 , -1 );*/
+}
+
+.button {
+    -fx-background-color:
+            rgba(255, 255, 255, 0.08),
+            rgba(0, 0, 0, 0.8),
+            #090a0c,
+            linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+            linear-gradient(#242a2e, #23282e),
+            radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,0.9),
+            rgba(255,255,255,0));
+    -fx-background-radius: 7, 6, 5, 4, 3, 5;
+    -fx-background-insets: -3 -3 -4 -3, -3, 0, 1, 2, 0;
+    -fx-font-family: "Arial";
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-padding: 10 20 10 20;
+}
+
+.button:focused, .button:hover {
+    -fx-background-color:
+            rgba(255, 255, 255, 0.08),
+            rgba(0, 0, 0, 0.8),
+            #090a0c,
+            linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+            linear-gradient(#3f4950, #23282e),
+            radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,0.9),
+            rgba(255,255,255,0));
+}
+
+.text-field, .text-area, .combo-box {
+    -fx-font-size: 18;
+    -fx-background-color:
+            rgba(255, 255, 255, 0.3),
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 50%),
+            rgb(218, 226, 224);
+    -fx-background-insets: 0 0 -1 0, 0, 1.5;
+    -fx-background-radius: 6, 5, 4;
+    -fx-padding: 6 10 4 10;
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.8), 5, 0, 0, 2 );
+    -fx-font-family: "Arial";
+}
+
+.text-field{
+    -fx-skin: "ressource.metro.MetroTextFieldSkin";
+}
+
+.text-field > .right-button > .right-button-graphic {
+    -fx-shape            : "M221.738,305.873l6.135,6.16l-2.875,2.863l-6.135-6.159l-6.263,6.237l-2.864-2.875l6.263-6.238l-6.177-6.202l2.875-2.863l6.177,6.201l6.244-6.22l2.864,2.876L221.738,305.873z";
+
+    -fx-padding: 0.5em 0.5em; /* TODO: put the real number here 18 18 */
+    -fx-background-color: black;
+}
+
+.password-field{
+    -fx-skin: "ressource.metro.MetroPasswordFieldSkin";
+}
+
+.password-field > .right-button > .right-button-graphic {
+    -fx-shape            : "M307.688,399.564c0,1.484-1.203,2.688-2.688,2.688c-1.484,0-2.688-1.203-2.688-2.688s1.203-2.688,2.688-2.688C306.484,396.876,307.688,398.08,307.688,399.564z M297.5,399h2.5c0,0,1.063-4,5-4c3.688,0,5,4,5,4h2.5c0,0-2.063-6.5-7.5-6.5C299,392.5,297.5,399,297.5,399z";
+    -fx-scale-shape: false;
+    -fx-background-color: black;
+}
+
+.text-area {
+    -fx-padding: 6 5 6 5;
+}
+
+.text-field:focused, .text-area:focused , .combo-box {
+    -fx-prompt-text-fill:
+            rgb(128,128,128);
+    -fx-background-color:
+            rgba(235, 235, 235, 0.5),
+            rgba(0, 0, 0, 0.4),
+            rgb(255, 255, 255);
+}
+
+.text-input > .right-button{
+    -fx-cursor: default;
+
+    -fx-background-insets: -0.1666665em -0.45em -0.1666665em -0.45em; /* 4 7 4 7 -> this values are subtracted by 2px in em because of the border of the textfield */
+}
+
+.text-input > .right-button:hover {
+    -fx-background-color: #dedede;
+}
+
+.text-input > .right-button:pressed {
+    -fx-background-color: black;
+}
+
+.text-input > .right-button:pressed > .right-button-graphic {
+    -fx-background-color: white;
+}
+
+.tree-table-view,
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.tree-table-view:focused,
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+/* Spaltenköpfe
+    Struktur column-header-background -> column-header */
+
+.tree-table-view .column-header-background,
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.tree-table-view .column-header-background .label,
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.tree-table-view .column-header,
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.tree-table-view .tree-table-cell,
+.table-view .table-cell{
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-font-family: "Arial";
+    -fx-padding: 8 8 8 8;
+}
+
+.context-menu {
+    -fx-background-color: white;
+    -fx-font-size: 16;
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;
+}
+
+.menu-item .label {
+    -fx-font-size: 16;
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;
+}
+
+.menu-item:focused .label {
+    -fx-font-size: 16;
+    -fx-font-family: "Arial";
+    -fx-text-fill: white;
+}
+
+
+.tree-table-row-cell,
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #616161;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.tree-table-row-cell:odd,
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #424242;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.tree-table-row-cell:selected,
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.tree-table-view > .virtual-flow > .scroll-bar:vertical,
+.tree-table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.tree-table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.tree-table-view > .virtual-flow > .scroll-bar:horizontal,
+.tree-table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.tree-table-view > .virtual-flow > .scroll-bar:horizontal > .track-background,
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+.tree-table-view > .virtual-flow > .scroll-bar > .increment-button,
+.tree-table-view > .virtual-flow > .scroll-bar > .decrement-button,
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+.list-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.list-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.list-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.list-view .list-cell{
+    -fx-text-fill: black;
+    -fx-font-size: 16;
+    -fx-font-family: "Arial";
+    -fx-padding: 8 8 8 8;
+}
+
+.list-row-cell{
+    -fx-background-color: -fx-list-cell-border-color, #616161;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.list-row-cell:odd{
+    -fx-background-color: -fx-list-cell-border-color, #424242;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.list-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.list-view > .virtual-flow > .scroll-bar:vertical,
+.list-view > .virtual-flow > .scroll-bar:vertical > .track,
+.list-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.list-view > .virtual-flow > .scroll-bar:horizontal,
+.list-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.list-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.list-view > .virtual-flow > .scroll-bar > .increment-button,
+.list-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+
+.hyperlink {
+    -fx-font-family: "Arial";
+    -fx-font-size: 18;
+    -fx-text-fill: rgba(255, 255, 255, 0.4);
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+    -fx-border-width: 0;
+    -fx-underline: no;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: rgba(255, 255, 0, 0.6);
+}
+
+.date-picker .arrow-button{
+    -fx-background-radius:0px ;
+}
+
+.date-picker .arrow-button .arrow{
+    -fx-background-radius:0px ;
+    -fx-background-color: #1783CC;
+}
+
+.date-picker .button {
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+    -fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+}
+
+.date-picker .button:hover {
+    -fx-border-color:transparent;
+    -fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+}
+
+.date-picker .button .arrow:pressed {
+    -fx-border-color:transparent;
+    -fx-pref-height: 35px;
+    -fx-pref-width: 35px;
+}
+
+.date-picker .cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-text-font-family : "Arial" ;
+    -fx-font-weight: bold;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: #1783CC;
+}
+
+.date-picker .cell:focused {
+    -fx-background-color:#11659e;
+}
+
+.date-picker-popup .label {
+    -fx-text-fill: black;
+    -fx-font-size: 18px;
+    -fx-text-font-family : "Arial" ;
+    -fx-font-weight: bold;
+}
+
+.date-picker .arrow-button:hover .arrow{
+    -fx-background-radius:0px ;
+    -fx-background-color: #40a9ef;
+}

@@ -1,0 +1,16 @@
+.jfx-decorator {
+    -fx-decorator-color: black; /* #272727 */
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-font-family: "Arial";
+}
+
+.jfx-decorator .jfx-decorator-buttons-container {
+    -fx-background-color: -fx-decorator-color;
+
+}
+
+.jfx-decorator .resize-border {
+    -fx-border-color: -fx-decorator-color;
+    -fx-border-width: 0 2 2 2;
+}
