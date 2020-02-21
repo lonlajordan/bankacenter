@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" styleClass="background" stylesheets="@../ressource/css/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingController">
+   <children>
+      <AnchorPane prefHeight="419.0" prefWidth="600.0" styleClass="top-segment" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="177.0" layoutY="106.0" prefHeight="341.0" prefWidth="432.0" spacing="5.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Emplacement d'enregistrement des fichiers" wrappingWidth="542.13671875" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="445.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <TextField fx:id="filepath" editable="false" prefHeight="35.0" prefWidth="400.0" />
+                        <ImageView fx:id="filechooser" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#processChooseFile" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressource/img/folder.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="5.0" prefWidth="497.0">
+                     <children>
+                        <CheckBox fx:id="checkBox" contentDisplay="CENTER" prefHeight="19.0" prefWidth="290.0" styleClass="button-label" text="Ouvrir les fichiers après l'enregistrement" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </CheckBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Text fill="WHITE" layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres de connexion de l'utilisateur" wrappingWidth="500.13671875" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Separator layoutX="10.0" layoutY="40.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <GridPane alignment="CENTER_LEFT" hgap="10.0" prefHeight="107.0" prefWidth="400.0" vgap="20.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="102.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="376.0" minWidth="10.0" prefWidth="292.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" styleClass="button-label" text="Mot de passe :" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                              <TextField fx:id="username" GridPane.columnIndex="1" />
+                              <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label styleClass="button-label" text="Nom d'utilisateur :" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Text fill="WHITE" layoutX="10.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres de l'application" wrappingWidth="500.13671875" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Separator layoutX="10.0" layoutY="214.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                  <JFXToggleButton fx:id="sound" alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="58.0" prefWidth="241.0" selected="true" styleClass="button-label" text="Effets sonnores" toggleColor="RED" toggleLineColor="#cd1b1b" unToggleColor="GREEN" unToggleLineColor="#65b537" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </JFXToggleButton>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="394.0" prefWidth="501.0" />
+                  <JFXToggleButton fx:id="animation" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="343.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="58.0" prefWidth="241.0" selected="true" styleClass="button-label" text="Animations        " toggleColor="RED" toggleLineColor="#cd1b1b" unToggleColor="GREEN" unToggleLineColor="#65b537" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </JFXToggleButton>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <buttons>
+                        <Button fx:id="save" onAction="#processSave" text="Enregistrer">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../ressource/img/Save.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </buttons>
+                  </ButtonBar>
+               </children>
+            </VBox>
+            <ImageView fx:id="back" fitHeight="50.0" fitWidth="50.0" layoutX="48.0" layoutY="106.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../ressource/img/GoBack.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0">
+         <image>
+            <Image url="@../ressource/img/copyright.png" />
+         </image>
+      </ImageView>
+      <Label ellipsisString=" " layoutX="40.0" layoutY="443.0" prefHeight="30.0" prefWidth="240.0" text="A group of 4GI ENSPY 2019 Students.                 Under the supervision of Ing. Bernabé BATCHKUI." wrapText="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="40.0" />
+      <Label layoutX="39.0" layoutY="375.0" prefHeight="20.0" prefWidth="80.0" styleClass="button-label" text="Copyright" AnchorPane.bottomAnchor="30.0" />
+   </children>
+</AnchorPane>

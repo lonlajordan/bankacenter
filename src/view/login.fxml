@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="400.0" styleClass="background" stylesheets="@../ressource/css/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+  <children>
+    <AnchorPane id="anchorPane2" prefHeight="350.0" prefWidth="510.0" styleClass="top-segment" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <VBox id="VBox" alignment="CENTER" prefHeight="300.0" prefWidth="421.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <AnchorPane id="AnchorPane" prefHeight="254.0" prefWidth="427.0">
+              <children>
+                <Label layoutX="14.0" layoutY="67.0" styleClass="label-field" text="Nom d'utilisateur" />
+                <TextField fx:id="username" layoutY="86.0" onKeyReleased="#resetMessage" prefWidth="415.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
+                <Label layoutX="14.0" layoutY="139.0" styleClass="label-field" text="Mot de passe" />
+                <PasswordField fx:id="password" layoutY="157.0" onKeyReleased="#resetMessage" prefWidth="415.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
+                <ImageView layoutY="-12.0">
+                  <image>
+                    <Image url="@../ressource/img/LoginLogo.png" />
+                  </image>
+                </ImageView>
+              </children>
+            </AnchorPane>
+          </children>
+        </VBox>
+            <Hyperlink fx:id="forgotPassword" onAction="#processForgotPassword" text="- Identifiants oubliés ?" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="40.0">
+               <font>
+                  <Font size="14.0" />
+               </font></Hyperlink>
+      </children>
+    </AnchorPane>
+    <HBox alignment="CENTER" prefHeight="25.0" prefWidth="418.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <children>
+        <Label fx:id="errorMessage" styleClass="label-field" />
+      </children>
+    </HBox>
+      <HBox id="HBox" alignment="CENTER" layoutX="40.0" layoutY="354.0" prefHeight="50.0" prefWidth="430.0" spacing="20.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <Button fx:id="login" defaultButton="true" maxHeight="2.147483647E9" onAction="#processLogin" prefHeight="70.0" prefWidth="205.0" text="Se connecter" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="20.0" fx:id="x1" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+  </children>
+</AnchorPane>

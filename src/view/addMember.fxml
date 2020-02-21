@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="541.0" prefWidth="540.0" styleClass="background" stylesheets="@../ressource/css/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddMemberController">
+   <children>
+      <VBox layoutY="-22.0" prefHeight="563.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-22.0">
+         <children>
+            <GridPane prefHeight="281.0" prefWidth="540.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="128.0" />
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="416.0" minWidth="10.0" prefWidth="352.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="button-label" text="Nom :" />
+                  <Label styleClass="button-label" text="Prénom :" GridPane.rowIndex="1" />
+                  <Label styleClass="button-label" text="Type :" GridPane.rowIndex="3" />
+                  <TextField fx:id="name" prefHeight="31.0" prefWidth="380.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="surname" prefHeight="31.0" prefWidth="380.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <HBox alignment="CENTER" prefHeight="59.0" prefWidth="357.0" spacing="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <children>
+                        <JFXRadioButton fx:id="physique" selected="true" styleClass="button-label" text="Physique">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="typeGroup" />
+                           </toggleGroup>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="morale" styleClass="button-label" text="Morale" toggleGroup="$typeGroup">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXRadioButton>
+                     </children>
+                  </HBox>
+                  <Label layoutX="40.0" layoutY="158.0" prefHeight="45.0" prefWidth="128.0" styleClass="button-label" text="Appartenance à une association :" wrapText="true" GridPane.rowIndex="4" />
+                  <HBox alignment="CENTER" prefHeight="59.0" prefWidth="357.0" spacing="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <children>
+                        <JFXRadioButton fx:id="oui" onAction="#onOui" selected="true" styleClass="button-label" text="Oui         ">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="typeGroup2" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="Non" onAction="#onNon" styleClass="button-label" text="Non    " toggleGroup="$typeGroup2">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXRadioButton>
+                     </children>
+                  </HBox>
+                  <Label layoutX="40.0" layoutY="91.0" styleClass="button-label" text="Téléphone :" GridPane.rowIndex="2" />
+                  <TextField fx:id="telephone" layoutX="168.0" layoutY="83.0" prefHeight="31.0" prefWidth="380.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+               <padding>
+                  <Insets left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </GridPane>
+            <GridPane fx:id="grid" layoutX="10.0" layoutY="10.0" prefHeight="159.0" prefWidth="540.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="130.0" />
+                  <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="416.0" minWidth="10.0" prefWidth="350.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="button-label" text="Association 1 :" />
+                  <Label styleClass="button-label" text="Association 2 :" GridPane.rowIndex="1" />
+                  <Label styleClass="button-label" text="Association 3 :" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="association1" editable="true" prefHeight="43.0" prefWidth="380.0" visibleRowCount="5" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="association2" editable="true" layoutX="168.0" layoutY="46.0" prefHeight="43.0" prefWidth="367.0" visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="association3" editable="true" layoutX="168.0" layoutY="46.0" prefHeight="43.0" prefWidth="431.0" visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+            </GridPane>
+            <Separator layoutX="10.0" layoutY="214.0" prefWidth="200.0">
+               <padding>
+                  <Insets bottom="20.0" top="40.0" />
+               </padding></Separator>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="394.0" prefWidth="501.0" />
+            <ButtonBar prefHeight="56.0" prefWidth="506.0">
+               <buttons>
+                  <Button fx:id="save" layoutX="328.0" layoutY="15.0" onAction="#processSave" text="Enregistrer">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressource/img/Save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="cancel" onAction="#processCancel" text="Annuler">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressource/img/cancel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </buttons>
+               <padding>
+                  <Insets bottom="20.0" right="30.0" />
+               </padding>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

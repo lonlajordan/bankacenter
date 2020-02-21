@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="537.0" prefWidth="935.0" styleClass="background" stylesheets="@../ressource/css/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjetController">
+   <children>
+      <VBox alignment="CENTER" layoutX="60.0" layoutY="14.0" prefHeight="450.0" prefWidth="697.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="417.0" prefWidth="722.0" spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="back" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#processBack" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                           <image>
+                              <Image url="@../ressource/img/GoBack.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <VBox spacing="5.0" style="-fx-border-color: white; -fx-border-width: 2;">
+                           <children>
+                              <Label styleClass="button-title" text="Etat" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                              <JFXRadioButton fx:id="actif" onAction="#processActif" selected="true" styleClass="button-label" text="En cours" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="typeGroup" />
+                                 </toggleGroup>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="inactif" layoutX="10.0" layoutY="10.0" onAction="#processInactif" styleClass="button-label" text="Achevé" toggleGroup="$typeGroup" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="allState" layoutX="22.0" layoutY="248.0" onAction="#processAllState" styleClass="button-label" text="Tout" toggleGroup="$typeGroup">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXRadioButton>
+                              <Label styleClass="button-title" text="Opérations" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="add" graphicTextGap="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#processAdd" prefHeight="200.0" prefWidth="200.0" text="Ajouter     " VBox.vgrow="NEVER">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../ressource/img/membreA.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="delete" graphicTextGap="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#processDelete" prefHeight="200.0" prefWidth="200.0" text="Supprimer" VBox.vgrow="NEVER">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../ressource/img/membreS.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="313.0" styleClass="button-title" text="LISTE DES PROJETS" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="20.0" top="20.0" />
+                           </padding>
+                        </Label>
+                        <StackPane fx:id="stackPane" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TableView fx:id="table" prefHeight="386.0" prefWidth="514.0" style="-fx-border-color: white; -fx-border-width: 2;" tableMenuButtonVisible="true">
+                                <columns>
+                                  <TableColumn fx:id="checkCol" prefWidth="48.0">
+                                       <graphic>
+                                          <CheckBox fx:id="selectAll" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" onAction="#processSelectAll" text=" " />
+                                       </graphic>
+                                    </TableColumn>
+                                  <TableColumn fx:id="nameCol" prefWidth="100.0">
+                                       <graphic>
+                                          <Label prefHeight="35.0" prefWidth="58.0" styleClass="button-label" text="Nom" />
+                                       </graphic>
+                                    </TableColumn>
+                                    <TableColumn fx:id="budjetCol" minWidth="0.0" prefWidth="100.0">
+                                       <graphic>
+                                          <Label prefHeight="41.0" prefWidth="62.0" styleClass="button-label" text="Budjet" />
+                                       </graphic>
+                                    </TableColumn>
+                                    <TableColumn fx:id="dateCol" minWidth="0.0" prefWidth="161.0">
+                                       <graphic>
+                                          <Label prefHeight="41.0" prefWidth="123.0" styleClass="button-label" text="Date de lancement" />
+                                       </graphic>
+                                    </TableColumn>
+                                    <TableColumn fx:id="progressCol" minWidth="0.0" prefWidth="151.0">
+                                       <graphic>
+                                          <Label prefHeight="41.0" prefWidth="123.0" styleClass="button-label" text="Montant en caisse" />
+                                       </graphic>
+                                    </TableColumn>
+                                </columns>
+                              </TableView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
